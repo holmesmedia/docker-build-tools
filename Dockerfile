@@ -43,6 +43,7 @@ RUN apt-get install rubygems -y \
     && apt-get install ruby-dev -y \
     && apt-get install build-essential -y \
     && gem install ffi -v '1.9.6'
+    && gem install sass
 
 VOLUME /src
 WORKDIR /src
