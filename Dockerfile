@@ -1,6 +1,6 @@
 FROM ubuntu:16.04
 
-LABEL version="0.1" \
+LABEL version="0.2" \
       os="Ubuntu 16.04" \
       description="Build tools including Apache Ant, ruby gems, yarn, npm, gulp, bower, gulp and grunt."
 
@@ -42,7 +42,7 @@ RUN apt-get install rubygems -y \
     && apt-get install ruby-bundler -y \
     && apt-get install ruby-dev -y \
     && apt-get install build-essential -y \
-    && gem install ffi -v '1.9.6'
+    && gem install ffi -v '1.9.6' \
     && gem install sass
 
 VOLUME /src

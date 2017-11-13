@@ -9,6 +9,7 @@ This includes a collection of the following tools, run in Ubuntu 16.04
 * Bower
 * Yarn
 * Ruby gems
+* Sass
 
 **Note**
 Using ffi 1.9.6
