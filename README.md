@@ -11,6 +11,8 @@ This includes a collection of the following tools, run in Ubuntu 16.04
 * Ruby gems
 * Sass
 
+Locale has been set to: `en_US.UTF-8`
+
 **Note**
 Using ffi 1.9.6
 

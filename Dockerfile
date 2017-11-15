@@ -1,8 +1,9 @@
 FROM ubuntu:16.04
 
-LABEL version="0.2" \
+LABEL version="0.3" \
       os="Ubuntu 16.04" \
-      description="Build tools including Apache Ant, ruby gems, yarn, npm, gulp, bower, gulp and grunt."
+      description="Build tools including Apache Ant, ruby gems, yarn, npm, gulp, bower, gulp and grunt." \
+      maintainers="Antonis Pavlakis <antonis@pavlakis.info>"
 
 RUN apt-get update
 
@@ -34,6 +35,19 @@ RUN apt-get install ant -y \
 
 # Set environment variable for JAVA
 ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
+
+#######################
+# Add default locale  #
+#######################
+
+RUN apt-get install locales -y
+
+# Set the locale - taken from: https://askubuntu.com/questions/581458/how-to-configure-locales-to-unicode-in-a-docker-ubuntu-14-04-container
+RUN locale-gen en_US.UTF-8
+ENV LANG en_US.UTF-8
+ENV LANGUAGE en_US:en
+ENV LC_ALL en_US.UTF-8
+
 
 #######################
 # Install Ruby Gems   #
